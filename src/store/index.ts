@@ -1,11 +1,20 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from "vue"
+import Vuex from "vuex"
+import i18n from "@/plugins/i18n"
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: { session: null, locale: "ko" },
+  mutations: {
+    login(state, s) {
+      state.session = s
+    },
+    locale(state, s) {
+      state.locale = s
+      i18n.locale = s
+    },
+  },
   actions: {},
-  modules: {}
-});
+  modules: {},
+})
