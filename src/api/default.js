@@ -1,7 +1,6 @@
 import axios from "axios"
 import { Service } from "axios-middleware"
-import { currentTime } from "@/lib/time"
-import route from "@/route"
+import route from "@/router"
 
 const HTTP = axios.create({
   baseURL: `${process.env.VUE_APP_API_SERVER_HOST}/${process.env.VUE_APP_API_VERSION}`,
@@ -24,7 +23,7 @@ s.register({
       // eslint-disable-next-line @typescript-eslint/camelcase
       request_param: request.data,
       // eslint-disable-next-line @typescript-eslint/camelcase
-      happens_at: currentTime(),
+      happens_at: new Date(),
     }
     switch (status) {
       case 400:
