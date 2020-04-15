@@ -1,31 +1,31 @@
-# boilerplate
+# Vue boilerplate
 
-## Project setup
+## Project 설정
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 개발 서버 사용, 핫리로드
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 운영 빌드
 ```
 yarn build
 ```
 
-### Run your unit tests
+### 유닛 테스트
 ```
 yarn test:unit
 ```
 
-### Run your end-to-end tests
+### e2e 테스트
 ```
 yarn test:e2e
 ```
 
-### Lints and fixes files
+### 린트 및 파일 수정
 ```
 yarn lint
 ```
