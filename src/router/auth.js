@@ -1,4 +1,5 @@
 import store from "@/store"
+import { Base64 } from "js-base64"
 
 // 로그인 되어 있는지 체크한다
 export const checkAuthenticated = (to, from, next) => {
@@ -49,7 +50,7 @@ export const loadSession = (to, from, next) => {
       }, {})
       const mappedElement = mapped["ckc"]
       if (mappedElement) {
-        const s = atob(mappedElement)
+        const s = Base64.decode(mappedElement)
         const session = JSON.parse(s)
         store.commit("login", session)
       }
